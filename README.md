@@ -49,6 +49,32 @@ Then the player gets to choose difficult by setting the starting speed of the sn
 3. Compile: `cmake .. && make`
 4. Run it: `./SnakeGame`.
 
+## Rubric points addressed
+### Loops, Functions, I/O
+| Rubric point  | Location |
+| ------------- | ------------- |
+| The project demonstrates an understanding of C++ functions and control structures.  |   There are multiple functions in each component to achieve modularity
+| The project reads data from a file and process the data, or the program writes data to a file.  | the highscore feature in [metadata.h](https://github.com/pranavbajoria93/Udacity-CppND-Capstone-Snake-Game/blob/c380204dc0b492070db858c416957c7980ac0bbd/src/metadata.h#L36)
+The project accepts user input and processes the input.  |  choose difficulty feature in [Snake.cpp line 95](https://github.com/pranavbajoria93/Udacity-CppND-Capstone-Snake-Game/blob/c380204dc0b492070db858c416957c7980ac0bbd/src/snake.cpp#L95)
+
+### Object Oriented Programming
+| Rubric point  | Location |
+| ------------- | ------------- |
+| The project uses Object Oriented Programming techniques.  |   Yes
+Classes use appropriate access specifiers for class members. | [thisPlatform private data member](https://github.com/pranavbajoria93/Udacity-CppND-Capstone-Snake-Game/blob/c380204dc0b492070db858c416957c7980ac0bbd/src/metadata.h#L30)
+Class constructors utilize member initialization lists. | Yes
+Classes abstract implementation details from their interfaces. | platform info is automatically fetched upon class initialization of metadata class
+Classes encapsulate behavior. | All functionalities related to the data w.r.t the game is encapsulated in metadata class
+
+### Memory Management
+| Rubric point  | Location |
+| ------------- | ------------- |
+| The project makes use of references in function declarations.  |   [metadata.h line 61](https://github.com/pranavbajoria93/Udacity-CppND-Capstone-Snake-Game/blob/c380204dc0b492070db858c416957c7980ac0bbd/src/metadata.h#L61)
+The project uses destructors appropriately. | [Renderer](src/Renderer.cpp) and [Beeper](src/Beeper.cpp)
+The project uses scope / Resource Acquisition Is Initialization (RAII) where appropriate. | Yes, check all the files
+The project follows the Rule of 5. | Yes, check all the files
+
+
 ## Rubric explained
 
 1. There are multiple functions in each component to achieve modularity
