@@ -25,7 +25,7 @@ Following are the main files containing classes along with their functionalities
 
 When the game is run, it first uses the metadata to display information about the platform the game is being run on.
 
-Then the player gets to choose difficult by setting the starting speed of the snake. Once the valid entry is registered, the game window is displayed and the user can play the game using arrow keys as input.
+Then the player gets to choose difficult by setting the starting speed of the snake. Once the valid entry is registered, the game window is displayed and the user can play the game using arrow keys as input. The game ends if the snake dies and the players score is displayed along with the high score.
 
 ## Dependencies for Running Locally
 * cmake >= 3.7
@@ -51,4 +51,8 @@ Then the player gets to choose difficult by setting the starting speed of the sn
 
 ## Rubric explained
 
-### 1 `Loops, Functions, I/O`
+1. There are multiple functions in each component to achieve modularity
+2. The reading and writing to a data stream is achieved by adding the highscore feature in the `metadata` file.
+3. Game's start speed is set by getting command line input from user
+4. As explained in the about section, the entire project is well structured with various classes. All concepts like encapsulation, abstraction, inheritance and polymorphism are displayed.
+5. The project makes use of references in function declarations- setHighScore() in metaData.h.

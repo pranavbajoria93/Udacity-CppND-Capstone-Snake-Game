@@ -23,7 +23,7 @@ public:
     // public method that can be called from other functions
     void displayPlatform();
     int getHighScore();
-    void setHighScore(int highScore);
+    void setHighScore(const int &highScore);
 
 
 private:
@@ -58,10 +58,10 @@ int MetaData::getHighScore()
     return highScore;
 }
 
-void MetaData::setHighScore(int highScore)
+void MetaData::setHighScore(const int &highScore)
 {
     std::ofstream dataFile;
-    dataFile.open(recordDataFile, std::ios::in | std::ios::out | std::ios::app);
+    dataFile.open(recordDataFile, std::ofstream::out | std::ofstream::trunc);
     if (!dataFile.is_open())
     {
         std::cout << " unable to open record file" << std::endl;
