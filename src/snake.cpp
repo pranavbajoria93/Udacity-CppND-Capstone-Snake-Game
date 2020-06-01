@@ -92,26 +92,8 @@ bool Snake::SnakeCell(int x, int y)
   return false;
 }
 
-void Snake::SetSpeed()
+void Snake::SetSpeed(const float &usr_speed)
 {
-  float usr_speed{min_speed};
-  char rng_buffer[25];
-  sprintf(rng_buffer, "%0.1f and %0.1f", min_speed, max_speed);
-  std::string rng_str(rng_buffer);
-
-  std::cout << "Select Difficulty by setting the speed of the Snake" << std::endl;
-  std::cout << "Choose a decimal number between " << rng_str << std::endl;
-
-  while (true)
-  {
-    if (scanf("%f", &usr_speed))
-    {
-      if (usr_speed >= min_speed && usr_speed <= max_speed)
-      {
         speed = usr_speed;
         return;
-      }
-    }
-    std::cerr << "\n\n\nInvalid Choice! \n Choose a decimal number between " << rng_str << std::endl;
-  };
 }

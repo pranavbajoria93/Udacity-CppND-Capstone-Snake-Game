@@ -15,7 +15,7 @@ class Snake {
         head_y(grid_height / 2) {}
 
   void Update();
-  void SetSpeed(); // to set the snake's speed
+  void SetSpeed(const float &usr_speed); // to set the snake's speed
   void GrowBody();
   bool SnakeCell(int x, int y);
 
@@ -32,8 +32,6 @@ class Snake {
   void UpdateHead();
   void UpdateBody(SDL_Point &current_cell, SDL_Point &prev_cell);
 
-  float min_speed{0.1};
-  float max_speed{0.6};
   bool growing{false};
   int grid_width;
   int grid_height;

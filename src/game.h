@@ -25,7 +25,10 @@ class Game {
   std::uniform_int_distribution<int> random_w;
   std::uniform_int_distribution<int> random_h;
 
+  // private members
   int score{0};
+  float min_speed{0.1};
+  float max_speed{0.6};
 
   void PlaceFood();
   void Update();
