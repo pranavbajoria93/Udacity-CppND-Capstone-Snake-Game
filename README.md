@@ -69,16 +69,10 @@ Classes encapsulate behavior. | All functionalities related to the data w.r.t th
 ### Memory Management
 | Rubric point  | Location |
 | ------------- | ------------- |
-| The project makes use of references in function declarations.  |   [metadata.h line 61](https://github.com/pranavbajoria93/Udacity-CppND-Capstone-Snake-Game/blob/c380204dc0b492070db858c416957c7980ac0bbd/src/metadata.h#L61)
-The project uses destructors appropriately. | [Renderer](src/Renderer.cpp) and [Beeper](src/Beeper.cpp)
-The project uses scope / Resource Acquisition Is Initialization (RAII) where appropriate. | Yes, check all the files
-The project follows the Rule of 5. | Yes, check all the files
+| The project makes use of references in function declarations.  |   [metadata.h line 61](https://github.com/pranavbajoria93/Udacity-CppND-Capstone-Snake-Game/blob/c380204dc0b492070db858c416957c7980ac0bbd/src/metadata.h#L61) [snake.cpp line 95](https://github.com/pranavbajoria93/Udacity-CppND-Capstone-Snake-Game/blob/96864e08dd6ce36a5f4a10ce5b85f18b849acde9/src/snake.cpp#L95)
+The project uses destructors appropriately. | [Renderer line 49](https://github.com/pranavbajoria93/Udacity-CppND-Capstone-Snake-Game/blob/96864e08dd6ce36a5f4a10ce5b85f18b849acde9/src/renderer.cpp#L49)
 
-
-## Rubric explained
-
-1. There are multiple functions in each component to achieve modularity
-2. The reading and writing to a data stream is achieved by adding the highscore feature in the `metadata` file.
-3. Game's start speed is set by getting command line input from user
-4. As explained in the about section, the entire project is well structured with various classes. All concepts like encapsulation, abstraction, inheritance and polymorphism are displayed.
-5. The project makes use of references in function declarations- setHighScore() in metaData.h.
+### Concurrency
+| Rubric point  | Location |
+| ------------- | ------------- |
+| The project uses multithreading. | The SDL libraries uses multithreading and the project could be accomplished without reimplementing threads.
