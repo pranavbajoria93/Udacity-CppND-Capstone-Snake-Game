@@ -1,12 +1,31 @@
-# CPPND: Capstone Snake Game Example
+# Udacity C++ Nanodegree Capstone Snake Game
 
-This is a starter repo for the Capstone project in the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213). The code for this repo was inspired by [this](https://codereview.stackexchange.com/questions/212296/snake-game-in-c-with-sdl) excellent StackOverflow post and set of responses.
+## About
+
+This is the final capstone project in the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213). 
+
+The poject chosen was the snake game that was provided as the starter code provided by udacity in this [repo] (https://github.com/udacity/CppND-Capstone-Snake-Game) and inspired by [this](https://codereview.stackexchange.com/questions/212296/snake-game-in-c-with-sdl) StackOverflow post.
 
 <img src="snake_game.gif"/>
 
-The Capstone Project gives you a chance to integrate what you've learned throughout this program. This project will become an important part of your portfolio to share with current and future colleagues and employers.
+## Project Structure
+Following are the main files containing classes along with their functionalities
 
-In this project, you can build your own C++ application or extend this Snake game, following the principles you have learned throughout this Nanodegree Program. This project will demonstrate that you can independently create applications using a wide range of C++ features.
+- `renderer.cpp` and `renderer.h`: The Renderer component takes the game object and renders the game using the SDL library
+
+- `game.cpp` and `game.h`: This is the game component which takes care of the important dynamics of the game pertaining to placements of the food item, and other game elements like the snake.
+
+- `snake.cpp` and `snake.h`: These files contain the snake component that is the main object that interacts in the game and has important functionalities to grow and move around using controller component
+
+- `controller.cpp` and `controller.h`: The controller component sets the way the keybpard controls are linked with the snake's movements.
+
+- `metadata.h`: The metadata component investigates system information and stores them as class members
+
+- `main.cpp`: The code that is called upon execution. It first instantiates an object each for the above mentioned components. It loops through each component updating, fetching and displaying data.
+
+When the game is run, it first uses the metadata to display information about the platform the game is being run on.
+
+Then the player gets to choose difficult by setting the starting speed of the snake. Once the valid entry is registered, the game window is displayed and the user can play the game using arrow keys as input.
 
 ## Dependencies for Running Locally
 * cmake >= 3.7
@@ -29,3 +48,7 @@ In this project, you can build your own C++ application or extend this Snake gam
 2. Make a build directory in the top level directory: `mkdir build && cd build`
 3. Compile: `cmake .. && make`
 4. Run it: `./SnakeGame`.
+
+## Rubric explained
+
+### 1 `Loops, Functions, I/O`
